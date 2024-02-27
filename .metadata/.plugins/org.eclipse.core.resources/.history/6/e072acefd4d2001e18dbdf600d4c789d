@@ -1,0 +1,131 @@
+package com.manju.ChessGame;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+	
+	String[][] chessBoard = new String[8][8];
+	
+	void inizializeChessBoard() {
+		for (int i = 0; i < 8; i++) {
+		    for (int j = 0; j < 8; j++) {
+		        if ((i == 0 && j == 0) || (i == 7 && j == 7)) {
+		            chessBoard[i][j] = "BR";
+		        } else if ((i == 0 && j == 7) || (i == 7 && j == 0)) {
+		            chessBoard[i][j] = "WR";
+		        } else if ((i == 1 && j == 7) || (i == 6 && j == 7)) {
+		            chessBoard[i][j] = "WN";
+		        } else if ((i == 1 && j == 0) || (i == 6 && j == 0)) {
+		            chessBoard[i][j] = "WN";
+		        } else if ((i == 2 && j == 7) || (i == 5 && j == 7)) {
+		            chessBoard[i][j] = "BB";
+		        } else if ((i == 2 && j == 0) || (i == 5 && j == 0)) {
+		            chessBoard[i][j] = "WB";
+		        } else if (i == 3 && j == 7) {
+		            chessBoard[i][j] = "BQ";
+		        } else if (i == 3 && j == 0) {
+		            chessBoard[i][j] = "WQ";
+		        } else if (i == 4 && j == 7) {
+		            chessBoard[i][j] = "BK";
+		        } else if (i == 4 && j == 0) {
+		            chessBoard[i][j] = "WK";
+		        } else if (j == 6 && (i >= 0 && i <= 7)) {
+		            chessBoard[i][j] = "BP";
+		        } else if (j == 1 && (i >= 0 && i <= 7)) {
+		            chessBoard[i][j] = "WP";
+		        }
+		        else {
+		        	chessBoard[i][j] = " ";
+		        }
+		    }
+		}
+	}
+	
+	void printBoard() {
+		Map<Integer, Character> m = new HashMap<>();
+		m.put(0,'a');
+		m.put(1,'b');
+		m.put(2,'c');
+		m.put(3,'d');
+		m.put(4,'e');
+		m.put(5,'f');
+		m.put(6,'g');
+		m.put(7,'h');
+        for (int i = 0; i < 8; i++) {
+            //System.out.println("\t" + m.get(i) + "_");
+            for (int j = 0; j < 8; j++) {
+                System.out.print(chessBoard[i][j] + "\t");
+            }
+            System.out.println();
+        }
+//		System.out.print("\t");
+//		String at = "";
+//        for (int i = 0; i < 8; i++) {
+//        	at=at+m.get(i) + "\t";
+//            System.out.print(m.get(i) + "\t");
+//        }
+//        System.out.println("\n");
+//        int size = at.length();
+//        for(int k=0;k<size*4;k++) {
+//        	System.out.print("_");
+//        }
+//        System.out.println("\n");
+//        System.out.println();
+//
+//        for (int i = 0; i < 8; i++) {
+//            System.out.print(i+"\t");
+//            for (int j = 0; j < 8; j++) {
+//                System.out.print(chessBoard[i][j] + "\t");
+//            }
+//            System.out.println();
+//        }
+	}
+	
+	//ArrayList<ArrayList<String>> chessBoard = new ArrayList<ArrayList<String>>();
+//	String[][] chessBoard = new String[8][8];
+
+	public static void main(String[] args) {
+		String[][] chessBoard = new String[8][8];
+		System.out.println("Hello world");
+		for (int i = 0; i < 8; i++) {
+		    for (int j = 0; j < 8; j++) {
+		        if ((i == 0 && j == 0) || (i == 7 && j == 7)) {
+		            chessBoard[i][j] = "WR";
+		        } else if ((i == 0 && j == 7) || (i == 7 && j == 0)) {
+		            chessBoard[i][j] = "BR";
+		        } else if ((i == 1 && j == 7) || (i == 6 && j == 7)) {
+		            chessBoard[i][j] = "BN";
+		        } else if ((i == 1 && j == 0) || (i == 6 && j == 0)) {
+		            chessBoard[i][j] = "WN";
+		        } else if ((i == 2 && j == 7) || (i == 5 && j == 7)) {
+		            chessBoard[i][j] = "BB";
+		        } else if ((i == 2 && j == 0) || (i == 5 && j == 0)) {
+		            chessBoard[i][j] = "WB";
+		        } else if (i == 3 && j == 7) {
+		            chessBoard[i][j] = "BQ";
+		        } else if (i == 3 && j == 0) {
+		            chessBoard[i][j] = "WQ";
+		        } else if (i == 4 && j == 7) {
+		            chessBoard[i][j] = "BK";
+		        } else if (i == 4 && j == 0) {
+		            chessBoard[i][j] = "WK";
+		        } else if (j == 6 && (i >= 0 && i <= 7)) {
+		            chessBoard[i][j] = "BP";
+		        } else if (j == 1 && (i >= 0 && i <= 7)) {
+		            chessBoard[i][j] = "WP";
+		        }
+		    }
+		}
+//		for(int i=0;i<8;i++) {
+//			for(int j=0;j<8;j++) {
+//				System.out.print(chessBoard[i][j]);
+//			}
+//			System.out.println();
+//		}
+//		// TODO Auto-generated method stub
+		Main m = new Main();
+		m.inizializeChessBoard();
+		m.printBoard();
+	}
+}

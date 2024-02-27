@@ -1,0 +1,13 @@
+package com.infikart.Service;
+
+public class InstagramService implements MessageService{
+	public boolean sendMessage(String address, String message) {
+		boolean messageStatus = false;
+		if(address.contains("@") && message) {
+			messageStatus = true; 
+			System.out.println("Message is "+message);
+			System.out.println("SEnding it to "+address);
+		}
+		return messageStatus;
+	}
+}

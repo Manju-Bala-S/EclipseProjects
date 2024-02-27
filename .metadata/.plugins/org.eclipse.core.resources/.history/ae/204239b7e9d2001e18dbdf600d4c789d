@@ -1,0 +1,271 @@
+package com.manju.ChessGame;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Board {
+	String[][] chessBoard = new String[8][8];
+	Map<Integer, String> m = new HashMap<>();
+	Board() {
+		m.put(0,"a");
+		m.put(1,"b");
+		m.put(2,"c");
+		m.put(3,"d");
+		m.put(4,"e");
+		m.put(5,"f");
+		m.put(6,"g");
+		m.put(7,"h");
+	}
+	List<ChessMan> chessMen = new ArrayList<>();
+	int br=0,bn=0,bb=0,bq=0,bk=0,bp=0,wr=0,wn=0,wb=0,wq=0,wk=0,wp=0;
+	List<String> temp1 = new ArrayList<>();
+	void inizializeChessBoard() {
+		System.out.println("m.get:"+m.get(0)+0);
+		for (int i = 0; i < 8; i++) {
+		    for (int j = 0; j < 8; j++) {
+		        if ((i == 0 && j == 0) || (i == 7 && j == 0)) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('B');
+		        	c1.setType('R');
+		        	if(temp1.contains("BR"+(br+1))) {
+		        		//System.out.println("yes");
+		        		c1.setId("BR"+br);
+		        	}
+		        	else {
+		        		c1.setId("BR"+(br+1));
+		        	}
+		        	temp1.add("BR"+(br+1));
+	        		br++;
+	        		String t = m.get(j);
+	        		c1.setPosition(m.get(j)+i);
+		        	chessMen.add(c1);
+		            chessBoard[j][i] = "BR";
+		        } else if ((i == 7 && j == 7) || (i == 0 && j == 7)) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('W');
+		        	if(temp1.contains("WR"+(wr+1))) {
+		        		//System.out.println("yes");
+		        		c1.setId("WR"+wr);
+		        	}
+		        	else {
+		        		c1.setId("WR"+(wr+1));
+		        	}
+		        	temp1.add("WR"+(wr+1));
+	        		//System.out.println("no");
+	        		wr++;
+	        		c1.setPosition(m.get(j)+i);
+		        	c1.setType('R');
+		        	chessMen.add(c1);
+		        	chessBoard[j][i] = "WR";
+		        } else if ((i == 1 && j == 7) || (i == 6 && j == 7)) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('W');
+		        	if(temp1.contains("WN"+(wr+1))) {
+		        		//System.out.println("yes");
+		        		c1.setId("WN"+wn);
+		        	}
+		        	else {
+		        		c1.setId("WN"+(wn+1));
+		        	}
+		        	temp1.add("WN"+(wn+1));
+	        		//System.out.println("no");
+	        		wn++;
+	        		c1.setPosition(m.get(j)+i);
+		        	c1.setType('N');
+		        	chessMen.add(c1);
+		        	chessBoard[j][i] = "WN";
+		        } else if ((i == 1 && j == 0) || (i == 6 && j == 0)) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('B');
+		        	if(temp1.contains("BN"+(bn+1))) {
+		        		//System.out.println("yes");
+		        		c1.setId("BN"+bn);
+		        	}
+		        	else {
+		        		c1.setId("BN"+(bn+1));
+		        	}
+		        	temp1.add("BN"+(bn+1));
+	        		//System.out.println("no");
+	        		bn++;
+	        		c1.setPosition(m.get(j)+i);
+		        	c1.setType('N');
+		        	chessMen.add(c1);
+		        	chessBoard[j][i] = "BN";
+		        } else if ((i == 2 && j == 7) || (i == 5 && j == 7)) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('W');
+		        	if(temp1.contains("WB"+(wb+1))) {
+		        		//System.out.println("yes");
+		        		c1.setId("WB"+wb);
+		        	}
+		        	else {
+		        		c1.setId("WB"+(wb+1));
+		        	}
+		        	temp1.add("WB"+(wb+1));
+	        		//System.out.println("no");
+	        		wb++;
+	        		c1.setPosition(m.get(j)+i);
+		        	c1.setType('B');
+		        	chessMen.add(c1);
+		        	chessBoard[j][i] = "WB";
+		        } else if ((i == 2 && j == 0) || (i == 5 && j == 0)) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('B');
+		        	if(temp1.contains("BB"+(bb+1))) {
+		        		//System.out.println("yes");
+		        		c1.setId("BB"+bb);
+		        	}
+		        	else {
+		        		c1.setId("BB"+(bb+1));
+		        	}
+		        	temp1.add("BB"+(bb+1));
+	        		//System.out.println("no");
+	        		bb++;
+	        		c1.setPosition(m.get(j)+i);
+		        	c1.setType('B');
+		        	chessMen.add(c1);
+		        	chessBoard[j][i] = "BB";
+		        } else if (i == 3 && j == 7) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('W');
+		        	if(temp1.contains("WQ"+(wq+1))) {
+		        		//System.out.println("yes");
+		        		c1.setId("WQ"+wq);
+		        	}
+		        	else {
+		        		c1.setId("WQ"+(wq+1));
+		        	}
+		        	temp1.add("WQ"+(wq+1));
+	        		//System.out.println("no");
+	        		wq++;
+	        		c1.setPosition(m.get(j)+i);
+		        	c1.setType('Q');
+		        	chessMen.add(c1);
+		        	chessBoard[j][i] = "WQ";
+		        } else if (i == 3 && j == 0) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('B');
+		        	if(temp1.contains("BQ"+(wq+1))) {
+		        		//System.out.println("yes");
+		        		c1.setId("BQ"+bq);
+		        	}
+		        	else {
+		        		c1.setId("BQ"+(bq+1));
+		        	}
+		        	temp1.add("BQ"+(bq+1));
+	        		//System.out.println("no");
+	        		bq++;
+	        		c1.setPosition(m.get(j)+i);
+		        	c1.setType('Q');
+		        	chessMen.add(c1);
+		        	chessBoard[j][i] = "BQ";
+		        } else if (i == 4 && j == 7) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('W');
+		        	if(temp1.contains("WK"+(wk+1))) {
+		        		//System.out.println("yes");
+		        		c1.setId("WK"+wk);
+		        	}
+		        	else {
+		        		c1.setId("WK"+(wk+1));
+		        	}
+	        		temp1.add("WK"+(wk+1));
+	        		//System.out.println("no");
+	        		wk++;
+	        		c1.setPosition(m.get(j)+i);
+		        	c1.setType('K');
+		        	chessMen.add(c1);
+		        	chessBoard[j][i] = "WK";
+		        } else if (i == 4 && j == 0) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('B');
+		        	if(temp1.contains("BK"+(bk+1))) {
+		        		//System.out.println("yes");
+		        		c1.setId("BK"+bk);
+		        	}
+		        	else {
+		        		c1.setId("BK"+(bk+1));
+		        	}
+		        	temp1.add("BK"+(bk+1));
+	        		//System.out.println("no");
+	        		bk++;
+	        		c1.setPosition(m.get(j)+i);
+		        	c1.setType('K');
+		        	chessMen.add(c1);
+		        	chessBoard[j][i] = "BK";
+		        } else if (j == 6 && (i >= 0 && i <= 7)) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('W');
+		        	if(temp1.contains("WP"+(wp+1))) {
+		        		temp1.add("WP"+(wp+1));
+		        		//System.out.println("yes");
+		        		c1.setId("WP"+wp);
+		        	}
+		        	else {
+		        		c1.setId("WP"+(wp+1));
+		        	}
+		        	temp1.add("WP"+(wp+1));
+	        		//System.out.println("no");
+	        		wp++;
+	        		c1.setPosition(m.get(j)+i);
+		        	c1.setType('P');
+		        	chessMen.add(c1);
+		        	chessBoard[j][i] = "WP";
+		        } else if (j == 1 && (i >= 0 && i <= 7)) {
+		        	ChessMan c1 = new ChessMan();
+		        	c1.setColor('B');
+		        	if(temp1.contains("BP"+(bp+1))) {
+		        		//System.out.println("yes");
+		        		c1.setId("BP"+bp);
+		        	}
+		        	else {
+		        		c1.setId("BP"+(bp+1));
+		        	}
+		        	temp1.add("BP"+(bp+1));
+	        		bp++;
+	        		c1.setPosition(m.get(j)+i);
+		        	c1.setType('P');
+		        	chessMen.add(c1);
+		        	chessBoard[j][i] = "BP";
+		        }
+		        else {
+		        	chessBoard[j][i] = "  ";
+		        }
+		    }
+		}
+	    System.out.println("temp:"+chessMen.size());
+	}
+	
+	void printBoard() {
+		System.out.print("\t");
+		String at = "";
+        for (int i = 0; i < 8; i++) {
+        	at=at+m.get(i) + "\t";
+            System.out.print(m.get(i) + "\t");
+        }
+        System.out.println();
+        int size = at.length();
+        for(int k=0;k<size*4;k++) {
+        	System.out.print("_");
+        }
+        System.out.println("\n");
+        for (int i = 0; i < 8; i++) {
+            System.out.print(i+"\t");
+            for (int j = 0; j < 8; j++) {
+                System.out.print(chessBoard[i][j] + "\t");
+            }
+            System.out.println();
+        }
+	}
+	
+	void makeMove(String fromPos , String toPos) {
+		System.out.println("fromPos:"+fromPos);
+		System.out.println("toPos:"+toPos);
+		
+		
+		
+	}
+	
+}

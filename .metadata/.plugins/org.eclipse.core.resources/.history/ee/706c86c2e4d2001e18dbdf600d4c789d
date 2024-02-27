@@ -1,0 +1,41 @@
+package com.manju.ChessGame;
+
+import java.util.Scanner;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	
+    public static void main( String[] args )
+    {
+    	
+       String toPos;
+    	
+       Board a = new Board();
+       a.inizializeChessBoard();
+//       a.printBoard();
+       
+//       for (ChessMan chessMan : a.chessMen) {
+//           System.out.println(chessMan.getId());
+//       }
+       
+       Scanner sc = new Scanner(System.in);
+       int ch=1;
+       
+       do {
+    	   if(ch%2!=0) {
+    		   System.out.println("White's turn");
+    	   }
+    	   else{
+    		   System.out.println("Black's turn");
+    	   }
+    	   a.printBoard();
+		   System.out.println("Enter position:");
+    	   toPos = sc.nextLine();
+    	   ch++;
+       }while(toPos.equals("q"));
+    }
+}

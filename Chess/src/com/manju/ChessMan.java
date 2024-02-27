@@ -1,0 +1,39 @@
+package com.manju;
+
+public class ChessMan {
+
+	private char color;
+	private String id;
+	private String position;
+	private char type;
+	
+	public ChessMan(char color, String id, String position, char type) {
+		super();
+		this.color = color;
+		this.id = id;
+		this.position = position;
+		this.type = type;
+	}
+	
+//	public ChessMan() {
+//		return ChessMan();
+//	}
+
+	public char getColor() {
+		return color;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public char getType() {
+		return type;
+	}
+	
+}
+

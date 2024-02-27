@@ -1,0 +1,45 @@
+import java.sql.*;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+
+public class Crud {
+	public String insertRecord() throws Exception{
+        Scanner sc = new Scanner(System.in);
+        Scanner sc1 = new Scanner(System.in);
+        System.out.println("Enter id:");
+        int id = sc.nextInt();
+        //System.out.println("Id:"+id);
+        System.out.println("Enter name:");
+        String name = sc1.nextLine();
+        //System.out.println("Name:"+name);
+        System.out.println("Enter experience:");
+        int experience = sc.nextInt();
+        //System.out.println("Experience:"+experience);
+        System.out.println("Enter salary:");
+        int salary = sc.nextInt();
+        //System.out.println("Salary:"+salary);
+        System.out.println("Enter designation:");
+        String designation = sc1.nextLine();
+        //System.out.println("Designation:"+designation);
+        System.out.println("Enter mailid:");
+        String mailid = sc1.nextLine();
+        //System.out.println("Mail-id:"+mailid);
+        System.out.println("Enter phone:");
+        int phone = sc.nextInt();
+        //System.out.println("Phone:"+phone);
+        System.out.println("Enter date:");
+        String dateString = sc1.nextLine();
+        //System.out.println("Date:"+dateString);
+        String pattern = "yyyy-MM-dd";
+        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+        java.sql.Date sqlDate = new java.sql.Date(dateFormat.parse(dateString).getTime());
+
+        String insertQuery = "INSERT INTO public.\"Employee\"(\n" +
+                "\tid, name, experience, salary, designation, mailid, phone, date)\n" +
+                "\tVALUES ("+id+",\'"+name+"\',"+experience+","+salary+",\'"+designation+"\',\'"+mailid+"\',"+phone+",\'"+sqlDate+"\');";
+        System.out.printf("Insertquery:"+insertQuery);
+        return insertQuery;
+
+    }
+}

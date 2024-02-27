@@ -1,0 +1,10 @@
+package com.infikart;
+public class App 
+{
+    public static void main( String[] args )
+    {
+        InfikartApp i1 = new InfikartApp();
+        Scanner sc = new Scanner(System.in);
+        i1.send(null, null);
+    }
+}

@@ -1,0 +1,13 @@
+package com.manju;
+
+public class Player {
+	public void makeMove(String elt,String toPos) {
+		//System.out.println("fromPos:"+);
+		System.out.println("toPos:"+toPos);
+		
+//		if(toPos == "") {
+//			
+//		}
+//		
+	}
+}

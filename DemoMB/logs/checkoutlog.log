@@ -1,0 +1,14 @@
+2024-02-15 14:58:05 INFO  [main] com.manju.DemoMB.App - Info log message
+2024-02-15 14:58:05 ERROR [main] com.manju.DemoMB.App - Error log message
+2024-02-15 15:06:28 INFO  [main] com.manju.DemoMB.App - Info log message- App
+2024-02-15 15:06:28 ERROR [main] com.manju.DemoMB.App - Error log message- App
+2024-02-15 15:06:34 INFO  [main] com.manju.DemoMB.Apps - Info log message - Apps
+2024-02-15 15:06:34 ERROR [main] com.manju.DemoMB.Apps - Error log message - Apps
+2024-02-15 15:06:40 INFO  [main] com.manju.DemoMB.Main - Info log message - Main
+2024-02-15 15:06:40 ERROR [main] com.manju.DemoMB.Main - Error log message - Main
+2024-02-15 15:26:34 INFO  [main] com.manju.DemoMB.Main [MainClass] - Info log message - Main
+2024-02-15 15:26:34 ERROR [main] com.manju.DemoMB.Main [MainClass] - Error log message - Main
+2024-02-15 15:26:38 INFO  [main] com.manju.DemoMB.Apps [AppsClass] - Info log message - Apps
+2024-02-15 15:26:38 ERROR [main] com.manju.DemoMB.Apps [AppsClass] - Error log message - Apps
+2024-02-15 15:26:42 INFO  [main] com.manju.DemoMB.App [AppClass] - Info log message- App
+2024-02-15 15:26:42 ERROR [main] com.manju.DemoMB.App [AppClass] - Error log message- App

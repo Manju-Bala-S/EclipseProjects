@@ -1,0 +1,13 @@
+package com.manju;
+
+public class Bishop extends ChessMan{
+	public boolean isAValidMove(String fromPos,String toPos) 
+	{
+		return false;
+		//rules
+	}
+	
+	public void move(String fromPose,String toPos) {
+		
+	}
+}

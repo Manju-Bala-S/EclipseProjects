@@ -1,0 +1,14 @@
+package com.manju;
+
+public class Knight extends ChessMan{
+	public boolean isValidMove(String fromPos,String toPos) 
+	{
+		return false;
+		//rules
+	}
+	
+	public void move(String fromPose,String toPos) {
+		
+	}
+}
+

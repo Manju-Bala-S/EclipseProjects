@@ -1,0 +1,5 @@
+package com.infikart.Service;
+
+public class SmsService implements MessageService{
+	
+}

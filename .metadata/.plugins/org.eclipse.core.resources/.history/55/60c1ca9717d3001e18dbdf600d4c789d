@@ -1,0 +1,23 @@
+package com.manju;
+
+public class Pawn extends ChessMan{
+	public Pawn(char color, String id, String position, char type) {
+		super(color, id, position, type);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Pawn() {
+		return Pawn;
+		// TODO Auto-generated constructor stub
+	}
+	
+	public boolean isAValidMove(String elt,String toPos) 
+	{
+		return false;
+		//rules
+	}
+	
+	public void move(String fromPose,String toPos) {
+		
+	}
+}

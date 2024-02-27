@@ -1,0 +1,16 @@
+package com.ecommerce.EmailService;
+
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+
+public class Inbox extends Message{
+	private String receiverId;
+ Message m1 = new Message();
+	
+	public String getReceiverId() {
+		return receiverId;
+	}
+	public void setReceiverId(String receiverId) {
+		this.receiverId = receiverId;
+	}
+}

@@ -1,0 +1,13 @@
+package com.ecommerce.EmailService;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println("Enter 1 if you ");
+    }
+}

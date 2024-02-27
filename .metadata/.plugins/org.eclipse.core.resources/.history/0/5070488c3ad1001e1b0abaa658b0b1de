@@ -1,0 +1,10 @@
+package com.ecommerce.EmailService;
+
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+
+public class Inbox {
+	private String receiverId;
+	Meassage m1 = new Message();
+
+}

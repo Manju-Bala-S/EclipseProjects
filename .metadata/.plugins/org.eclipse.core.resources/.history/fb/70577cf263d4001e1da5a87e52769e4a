@@ -1,0 +1,87 @@
+package com.ecommerce.EmailService;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.util.SystemPropertyUtils;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	BeanFactory context = new ClassPathXmlApplicationContext("spring.xml");
+        System.out.println("Enter 1 to login and 2 to register");
+//        User u1 = new User();
+        Uaser u1 = 
+        u1.setId(12);
+        u1.setName("Manju");
+        u1.setMailId("manju@gmail.com");
+        System.out.println("Id:"+u1.getId()+"\nName:"+u1.getName()+"\nMail id:"+u1.getMailId());
+        
+        List<Inbox> inbox = new ArrayList<>();
+        
+        Scanner sc = new Scanner(System.in);
+        Scanner sc1 = new Scanner(System.in);
+        
+        System.out.println("Enter 1 to quit");
+        int choice = 2;
+        
+        while(choice != 1) {
+        	System.out.println("Enter message:");
+            String msg = sc.nextLine();
+            
+            System.out.println("Enter Receiver mail-id:");
+            String recvId = sc.nextLine();
+            
+            Inbox i1 = new Inbox();
+            i1.setReceiverId(recvId);
+            
+            System.out.println(i1.getReceiverId());
+            
+            Message m1 = new Message();
+            m1.setMessage(msg);
+            
+            System.out.println("Msg:"+m1.getMessage());
+            System.out.println("Date:"+m1.getCurrentDate());
+            System.out.println("Time:"+m1.getFormattedTime());
+            
+            i1.setM1(m1);
+
+            inbox.add(i1);
+            //messageMap.put(i1.getReceiverId(),inbox);
+            
+            System.out.println("press 2 to send some more msgs and 1 to quit");
+            if(sc1.nextInt()==1)
+            	break;
+        }
+        
+        Map<String, List<List<String>>> messageMap = new HashMap<>();
+        List<List<String>> al = new ArrayList<>();
+    	
+        for(Inbox i:inbox) {
+        	
+        	System.out.print(i.m1.getMessage()+"\t");
+        	System.out.print(i.getFormattedTime()+"\t");
+        	System.out.print(i.getReceiverId()+"\t");
+        	System.out.println(i.getCurrentDate());
+        	List<String> temp = new ArrayList<String>();
+        	temp.add(i.m1.getMessage());
+        	temp.add(i.getFormattedTime());
+        	temp.add(i.getCurrentDate().toString());
+        	messageMap.computeIfAbsent(i.getReceiverId(), k ->new ArrayList<>()).add(temp);
+
+       }
+        	
+        for(Map.Entry<String, List<List<String>>>  entry: messageMap.entrySet()) {
+        	System.out.print(entry.getKey()+" : ");
+        	System.out.println(entry.getValue());
+        	
+        }
+    }
+}

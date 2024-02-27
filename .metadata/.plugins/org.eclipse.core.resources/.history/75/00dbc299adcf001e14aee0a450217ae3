@@ -1,0 +1,7 @@
+package com.infikart;
+
+import com.infikart.Service.MessageService;
+
+public class InfikartApp {
+	private MessageService message = new 
+}

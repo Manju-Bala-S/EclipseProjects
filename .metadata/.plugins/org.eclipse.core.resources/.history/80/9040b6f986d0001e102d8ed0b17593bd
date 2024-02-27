@@ -1,0 +1,17 @@
+package com.ecommerce.EmailService;
+
+import java.time.*;
+import java.time.format.DateTimeFormatter;i
+
+public class Inbox {
+	private String senderId;
+	private String msg;
+	
+	LocalDate currentDate = LocalDate.now();
+	LocalTime currentTime = LocalTime.now();
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+	String formattedTime = currentTime.format(formatter);
+	
+	
+	
+}

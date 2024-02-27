@@ -1,0 +1,8 @@
+package com.infikart.Factory;
+import com.infikart.Service.MessageService;
+import com.infikart.Service.Messa;
+
+public class MessageFactory {
+	private static MessageService message = new SmsService();
+	
+}

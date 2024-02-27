@@ -1,0 +1,24 @@
+package com.ecommerce.EmailService;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = "com.ecommerce")
+public class BeanConfig {
+	@Bean
+	public User getUser() {
+		return new User();
+	}
+	
+	@Bean("prototype")  
+	public Inbox getInbox() {
+		return new Inbox();
+	}
+	
+	@Bean("prototype")   
+	public Message getMessage() {
+		return new Message();
+	}
+}

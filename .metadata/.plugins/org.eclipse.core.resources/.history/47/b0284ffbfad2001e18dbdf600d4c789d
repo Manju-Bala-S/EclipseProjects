@@ -1,0 +1,11 @@
+package com.manju;
+
+public class WhitePlayer implements Player{
+
+	@Override
+	public void makeMove() {
+		// TODO Auto-generated method stub
+			
+	}
+
+}

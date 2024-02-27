@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Sat Feb 24 09:54:38 IST 2024
+org.eclipse.jst.jee.server\:Jdbc=/home/apnx-desk-003/Downloads/apache-tomcat-8.5.98/wtpwebapps/Jdbc
+org.eclipse.jst.jee.server\:JSON=/home/apnx-desk-003/Downloads/apache-tomcat-8.5.98/wtpwebapps/JSON
+org.eclipse.jst.jee.server\:MailApp=/home/apnx-desk-003/Downloads/apache-tomcat-8.5.98/wtpwebapps/MailApp

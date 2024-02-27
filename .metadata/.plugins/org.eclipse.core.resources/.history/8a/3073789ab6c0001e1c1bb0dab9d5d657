@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container { 
+  height: 200px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="center">
+  <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <br/>
+     <center><h1><em>Student Management System</em></h1></center>
+  	 <br/>
+     <br/>
+     <br/>
+     <center>
+     	 <form action="create">
+            <input type="submit" value="create">
+     </form>
+     </center>
+     <br/>
+     <br/>
+     <br/>
+     <center>
+     	<form action="Read.jsp">
+            <input type="submit" value="read">
+     </form>
+     </center>
+     <br/>
+     <br/>
+     <br/>
+     <center>
+     	<form action="update">
+            <input type="submit" value="update">
+     </form>
+     </center>
+     <br/>
+     <br/>
+     <br/>
+     <center>
+     	  <form action="delete">
+            <input type="submit" value="delete">
+     </form>
+     </center>
+  </div>
+</div>
+</body>
+</html>
+
+

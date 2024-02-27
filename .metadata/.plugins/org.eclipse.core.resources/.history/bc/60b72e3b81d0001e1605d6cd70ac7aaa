@@ -1,0 +1,21 @@
+package com.ecommerce.AppAnno;
+
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ApplicationContext factory = new AnnotationConfigApplicationContext();
+    	 Scanner sc = new Scanner(System.in);
+         System.out.print("Enter address:");
+         String address = sc.nextLine();
+         System.out.print("Enter message:");
+         String message = sc.nextLine();
+         msg1.sendMessage(address,message);
+        System.out.println( "Hello World!" );
+    }
+}

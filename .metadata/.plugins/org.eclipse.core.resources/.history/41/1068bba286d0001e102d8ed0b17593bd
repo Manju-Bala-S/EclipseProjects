@@ -1,0 +1,11 @@
+package com.ecommerce.EmailService;
+
+import java.time.*;i
+
+public class Inbox {
+	private String senderId;
+	private String msg;
+	
+	LocalDate c
+	
+}

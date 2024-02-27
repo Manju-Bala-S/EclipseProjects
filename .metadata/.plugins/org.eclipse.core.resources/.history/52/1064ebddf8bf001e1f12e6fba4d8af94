@@ -1,0 +1,74 @@
+import java.lang.reflect.Executable;
+import java.sql.*;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+
+public class Main {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+		String sql = "select * from public.\"Student\";";
+        String url = "jdbc:postgresql://localhost/postgres";
+        String uname = "postgres";
+        String pwd = "postgres";
+
+
+        try {
+            Connection conn = DriverManager.getConnection(url, uname, pwd);
+            Statement st = conn.createStatement();
+
+            int choice;
+            Scanner sc = new Scanner(System.in);
+            Scanner sc1 = new Scanner(System.in);
+
+            System.out.println("Enter choice(1 to read , 2 to insert and 3 to delete a record");
+            choice = sc.nextInt();
+            System.out.println("Choice:"+choice);
+
+            //Crud c = new Crud();
+
+            if(choice == 1){
+            	System.out.println("Inside ch1");
+                ResultSet rs = st.executeQuery(sql);
+                while (rs.next()) {
+                    System.out.print("Column 1 returned ");
+                    System.out.println(rs.getInt("id")+" "+rs.getString("name"));
+                }
+                rs.close();
+            }
+
+            /*else if(choice ==2){
+                try{
+                    String temp = c.insertRecord();
+                    System.out.printf("temp:"+temp);
+                    st.executeUpdate(temp);
+                    System.out.println("Employee record inserted successfully");
+                }
+                catch(Exception e){
+                    System.out.println("Employee record not inserted");
+                }
+            }*/
+
+            else if(choice==3){
+                try {
+                    System.out.println("Enter the emplyee's name:");
+                    String name = sc1.nextLine();
+                    String sql1 = "Delete from public.\"Employee\" where name=\'"+name+"\';";
+                    System.out.println("sql1:"+sql1);
+                    st.executeUpdate(sql1);
+                    conn.commit();
+                    System.out.println("Deleted employee record");
+                }
+                catch(Exception e){
+                    System.out.println("Not deleted");
+                }
+            }       
+            st.close();
+        }
+        finally {
+        	System.out.println("Done");
+        }    
+	}
+
+}

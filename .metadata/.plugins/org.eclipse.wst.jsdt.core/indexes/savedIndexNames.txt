@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+/home/apnx-desk-003/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes

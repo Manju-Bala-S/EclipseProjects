@@ -1,0 +1,11 @@
+package com.manju;
+
+public class Player {
+	public void makeMove(String fromPos,String toPos,Board b) {
+		System.out.println("fromPos:"+fromPos);
+		System.out.println("toPos:"+toPos);
+		
+		System.out.println(b.getChessManId(fromPos));
+		
+	}
+}

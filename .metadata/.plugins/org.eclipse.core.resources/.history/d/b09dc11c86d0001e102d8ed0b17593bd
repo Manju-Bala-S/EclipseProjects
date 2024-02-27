@@ -1,0 +1,7 @@
+package com.ecommerce.EmailService;
+
+public class User {
+	private id;
+	private name;
+	private mail
+}

@@ -1,0 +1,12 @@
+package com.ecommerce.AppAnno;
+
+import org.springframework.context.ApplicationContext;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ApplicationContext factory = 
+        System.out.println( "Hello World!" );
+    }
+}

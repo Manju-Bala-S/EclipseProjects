@@ -1,0 +1,15 @@
+package com.manju;
+
+import java.util.Map;
+
+public class BlackPlayer implements Player{
+
+	private Map<String,ArrayList<String>> moves = new HashMap<String,ArrayList<String>>();
+	
+	@Override
+	public void makeMove(String fromPos,String toPos) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,39 @@
+package com.ecommerce.EmailService;
+
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+
+public class Inbox {
+	private String receiverId;
+	private String msg;
+	
+	LocalDate currentDate = LocalDate.now();
+	LocalTime currentTime = LocalTime.now();
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+	String formattedTime = currentTime.format(formatter);
+	
+	public void setReceiverId(String senderId) {
+		this.receiverId = receiverId;
+	}
+	public String getMsg() {
+		return msg;
+	}
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+	public LocalDate getCurrentDate() {
+		return currentDate;
+	}
+	
+	public String getFormattedTime() {
+		return formattedTime;
+	}
+
+	public String getReceiverId() {
+		return receiverId;
+	}
+	public LocalTime getCurrentTime() {
+		return currentTime;
+	}
+
+}

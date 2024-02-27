@@ -1,0 +1,14 @@
+package com.manju;
+
+public class Queen extends ChessMan{
+	public boolean isaValidMove(String fromPos,String toPos) 
+	{
+		return false;
+		//rules
+	}
+	
+	public void move(String fromPose,String toPos) {
+		
+	}
+}
+

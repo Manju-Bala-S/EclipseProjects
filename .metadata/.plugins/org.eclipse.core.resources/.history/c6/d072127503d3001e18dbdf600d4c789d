@@ -1,0 +1,11 @@
+package com.manju;
+
+public class ChessMan {
+
+	public char color;
+	public String id;
+	private String position;
+	private char type;
+	
+}
+

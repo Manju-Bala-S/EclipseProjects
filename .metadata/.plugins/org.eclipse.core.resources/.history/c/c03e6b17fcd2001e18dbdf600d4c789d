@@ -1,0 +1,11 @@
+package com.manju;
+
+public class Rook extends ChessMan{
+	public boolean isValidMove(String fromPos,String toPos) 
+	{
+		return false;
+		//rules
+	}
+	
+	public void move
+}

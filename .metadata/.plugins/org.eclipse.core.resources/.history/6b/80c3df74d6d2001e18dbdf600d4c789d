@@ -1,0 +1,7 @@
+package com.manju.ChessGame;
+
+public class ChessMan {
+
+	private char color;
+	private int 
+}

@@ -1,0 +1,6 @@
+package com.ecommerce.EmailService;
+
+@Configuratio
+public class BeanConfig {
+
+}

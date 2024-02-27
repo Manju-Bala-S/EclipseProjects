@@ -1,0 +1,12 @@
+package com.infikart;
+
+import com.infikart.Service.MessageService;
+import com.infikart.Service.SmsService;
+
+public class InfikartApp {
+	private MessageService message = new SmsService();
+	public void send(String address , String message) {
+		boolean messageStatus = this.message.sendMessage(address, message);
+		i
+	}
+}

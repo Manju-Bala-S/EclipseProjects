@@ -1,0 +1,17 @@
+package com.infikart.Service;
+
+public class SmsService implements MessageService{
+
+	@Override
+	public boolean sendMessage(String address, String message) {
+		boolean messageStatus = false;
+		String regex = "\\d{10}";
+		if(address.matches(regex)) {
+			messageStatus = true; 
+			System.out.println("Message is "+message);
+			System.out.println("SEndin");
+		}
+		return messageStatus;
+	}
+	
+}

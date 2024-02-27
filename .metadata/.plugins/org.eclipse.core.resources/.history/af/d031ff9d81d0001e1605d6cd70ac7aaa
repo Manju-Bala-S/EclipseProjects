@@ -1,0 +1,6 @@
+package com.ecommerce.AppAnno;
+
+@Configuration
+public class AppConfig {
+
+}

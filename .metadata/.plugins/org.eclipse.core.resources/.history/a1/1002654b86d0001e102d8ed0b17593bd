@@ -1,0 +1,7 @@
+package com.ecommerce.EmailService;
+
+public class Inbox {
+	private String senderId;
+	private String msg;
+	
+}

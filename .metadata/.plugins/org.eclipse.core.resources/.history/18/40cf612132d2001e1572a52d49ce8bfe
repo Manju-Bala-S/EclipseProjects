@@ -1,0 +1,7 @@
+package com.ecommerce.AppAnno;
+
+public interface MessageService {
+	String addr;
+	private String msg;
+	public boolean sendMessage(String address,String message);
+}

@@ -1,0 +1,12 @@
+package com.infikart.Service;
+
+public class SmsService implements MessageService{
+
+	@Override
+	public boolean sendMessage(String address, String message) {
+		boolean messageStatus = false;
+		String regex = "\"
+		return false;
+	}
+	
+}
